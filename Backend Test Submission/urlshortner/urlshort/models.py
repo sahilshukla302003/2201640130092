@@ -13,7 +13,6 @@ class ShortURL(models.Model):
         return timezone.now() > self.expires_at
 
 
-
 class ClickEvent(models.Model):
     short_url = models.ForeignKey(ShortURL, on_delete=models.CASCADE, related_name="clicks_data")
     timestamp = models.DateTimeField(auto_now_add=True)
