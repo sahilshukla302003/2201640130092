@@ -8,6 +8,7 @@ from django.views.decorators.csrf import csrf_exempt
 from .models import ShortURL,ClickEvent
 from .utils import generateShortcode
 
+
 @csrf_exempt
 def createshorturl(request):
     if request.method != "POST":
